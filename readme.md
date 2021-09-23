@@ -1,3 +1,21 @@
+# To start:
+
+- [npm]
+- npm install to install all dependencies
+
+## development
+Run the local `create-react-app` development server with Polaris preconfigured.
+
+````
+
+**With npm**
+
+```bash
+npm start
+````
+
+Open **http://localhost:3000** in your browser and you should see the Polaris example application.
+
 # Task
 
 1. Form needs to handle ALL fields ✅
