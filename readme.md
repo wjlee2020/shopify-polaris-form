@@ -1,22 +1,4 @@
-# To start:
-
-- [npm]
-- npm install to install all dependencies
-
-## development
-Run the local `create-react-app` development server with Polaris preconfigured.
-
-````
-
-**With npm**
-
-```bash
-npm start
-````
-
-Open **http://localhost:3000** in your browser and you should see the Polaris example application.
-
-# Task
+# The Task
 
 1. Form needs to handle ALL fields ✅
 2. You can simply save the updated fields to an object and `console.log` the object when click the save button ✅
@@ -90,3 +72,23 @@ and I got to practice using React which I always love to do.
 I think I will keep continuing to learn about Shopify and potentially create my own small project.
 There is still a lot for me to learn (both Shopify and react), especially the layout components for Polaris.
 Thank you for taking the time to read and go through my small Form component.
+
+
+# To start:
+
+- [npm]
+- npm install to install all dependencies
+
+## development
+Run the local `create-react-app` development server with Polaris preconfigured.
+
+````
+
+**With npm**
+
+```bash
+npm start
+````
+
+Open **http://localhost:3000** in your browser and you should see the Polaris example application.
+
