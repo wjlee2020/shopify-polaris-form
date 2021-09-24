@@ -17,6 +17,7 @@ Couple things I noticed:
 - onChange handler for Polaris TextField component does not support event.target
   - I couldn't do my normal onChange={({target}) => setState(target.value)} on the TextField
     (correct me if I'm wrong, but I kept getting undefined errors)
+    (I was also considering trying to use event.keyCode for handling inputs)
 - The docs all used the useCallBack hook, but I don't think that was necessary
   - no props are being sent (no need to worry about over re-rendering with one form)
   - I don't think defining functions are costly to effect performance (things I read)
@@ -29,7 +30,8 @@ with some tiny error handling using error property on each TextField as well as 
 I was originally going to go with Redux to manage state, but I remembered my brother telling me: 'don't overkill if you don't need to'.
 I went with useContext over the basic useState hook to manage my state since:
 
-- If this were to be a real Form api/component for an app, from my experience, the User details need to be global
+- If this were to be a real Form api/component for an app, from my experience, the User details should be global state
+- I have a habit of trying to avoid props.
 - it helps to separate UI logic from the business logic
 
 ## Handling User Detail Information Change
