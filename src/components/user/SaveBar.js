@@ -3,13 +3,15 @@ import React, { useContext } from 'react';
 import { UserContext } from '../../context/user-context';
 
 export default function SaveBar() {
-    const { handleSubmit, handleCancel } = useContext(UserContext)
+    const { handleSubmit, handleCancel, isLoading, message } = useContext(UserContext);
+
     return (
         <ContextualSaveBar
             fullWidth
-            message="Editing User Info"
+            message={message}
             saveAction={{
-                onAction: handleSubmit
+                onAction: handleSubmit,
+                loading: isLoading
               }}
               discardAction={{
                 onAction: handleCancel,

@@ -7,6 +7,8 @@ function UserContextProvider({children}) {
     const [authUser, setAuthUser] = useState({});
     const [isEditing, setIsEditing] = useState(false);
     const [error, setError] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [message, setMessage] = useState('Editing Info')
     
 
     let invalid = !authUser.first_name || !authUser.last_name || !authUser.gender || !authUser.birthday || !authUser.address;
@@ -58,7 +60,13 @@ function UserContextProvider({children}) {
             localStorage.setItem('authUser', JSON.stringify(authUser));
             setAuthUser(JSON.parse(localStorage.getItem('authUser')));
             console.log(authUser)
-            setIsEditing(false);
+            setIsLoading(true)
+            setMessage('Edited!')
+            setTimeout(() => {
+                setIsLoading(false);
+                setMessage('Editing Info')
+                setIsEditing(false);
+            }, 350)
         }
     }
     const handleCancel = () => {
@@ -93,7 +101,9 @@ function UserContextProvider({children}) {
             handleAddressChange,
             handleSubmit,
             handleCancel,
-            genderOptions
+            genderOptions,
+            isLoading,
+            message
         }}>
             {children}
         </UserContext.Provider>
